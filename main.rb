@@ -2,7 +2,7 @@
 
 n=ARGV.first
 
-puts "Input: #{n}"
+puts "Input:  #{n}"
 
 begin
   n_sqrt = Math.sqrt(n).to_i
@@ -45,7 +45,8 @@ matrix = counter_clockwise_spiral_square(n_sqrt)
 
 cell_width = n.to_s.size
 
-matrix.each do |array|
+matrix.each_with_index do |array, index|
+  print 0 == index ? "Output: " : " "*8
   array.each do |element|
     width = element.to_s.size
     print " " * (cell_width-width) + element.to_s
