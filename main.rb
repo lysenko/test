@@ -5,8 +5,8 @@ n=ARGV.first
 puts "Input:  #{n}"
 
 begin
-  n_sqrt = Math.sqrt(n).to_i
-  raise if (n_sqrt * n_sqrt) != n.to_i
+  n_sqrt = Math.sqrt(n.to_i).to_i
+  raise if (n_sqrt * n_sqrt).to_s != n
 rescue
   puts "Error: input should be a perfect square number"
   exit -1
